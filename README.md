@@ -20,8 +20,7 @@ A full-stack learning platform with course delivery, assessments, and role-based
 9. [Testing](#testing)
 10. [Contributing](#contributing)
 11. [License](#license)
-12. [Contributors](#contributors)
-13. [Support](#support)
+12. [Support](#support)
 
 ---
 
@@ -226,19 +225,6 @@ Contributions are welcome! Please follow these steps:
 ## 📝 License
 
 See the [LICENSE](LICENSE) file for details.
-
----
-
-## 👥 Contributors
-
-| Name            | Role               |
-| :-------------- | :----------------- |
-| Nadi Zeya       | Project management |
-| Kyaw Hmue San   | Lead developer     |
-| Hein Htut Aung  | Data analyst       |
-| Nang Shwe Sin   | Frontend developer |
-| Min Thein Kyaw  | Backend developer  |
-| Aung Kyaw Soe   | QA lead            |
 
 ---
 
