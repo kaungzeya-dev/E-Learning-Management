@@ -1,0 +1,215 @@
+/* ============================================
+   Admin Dashboard Container
+   ============================================ */
+.admin-dashboard-container {
+  min-height: 100vh;
+  background: #f6fbfd;
+}
+
+.admin-dashboard-content {
+  min-width: 0;
+}
+
+/* ============================================
+   Table Styles
+   ============================================ */
+.clickable-row {
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.clickable-row:hover {
+  background-color: #f8f9fa;
+}
+
+/* ============================================
+   Modal Styles
+   ============================================ */
+.modal-backdrop {
+  background: #685EE254 !important;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1050;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 1rem;
+}
+
+.modal-backdrop .modal-dialog {
+  margin: auto !important;
+  max-width: 800px;
+  width: 100%;
+  position: relative;
+  top: auto;
+  left: auto;
+  right: auto;
+  transform: translateX(20px) !important;
+}
+
+@media (max-width: 900px) {
+  .modal-backdrop .modal-dialog {
+    transform: none !important;
+  }
+}
+
+.modal-dialog-scrollable {
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.modal-body-scrollable {
+  max-height: 70vh;
+  overflow-y: auto;
+}
+
+.modal-backdrop .modal-header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+  color: white;
+  padding: 1.25rem 1.5rem;
+  border-bottom: none;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  box-shadow: 0 2px 8px rgba(102, 126, 234, 0.15);
+}
+
+.modal-backdrop .modal-header .modal-title {
+  color: white;
+  font-weight: 600;
+  font-size: 1.25rem;
+}
+
+.modal-backdrop .modal-header .btn-close {
+  filter: invert(1) brightness(2);
+  opacity: 0.9;
+}
+
+.modal-backdrop .modal-header .btn-close:hover {
+  opacity: 1;
+}
+
+/* ============================================
+   Detail Section Styles
+   ============================================ */
+.detail-section {
+  margin-bottom: 1.5rem;
+}
+
+.detail-label {
+  font-weight: bold;
+  color: #667eea;
+  /* Matches main page theme color */
+}
+
+.dashboard-main .card-title.text-info {
+  color: #667eea !important;
+}
+
+.analytics-header h2.text-info {
+  color: #667eea !important;
+}
+
+.modal-backdrop .detail-section .fw-semibold {
+  font-weight: normal !important;
+}
+
+.modal-backdrop .detail-section p {
+  font-weight: normal;
+}
+
+/* ============================================
+   Badge Icon
+   ============================================ */
+.badge-icon {
+  width: 32px;
+  height: 32px;
+  margin-right: 10px;
+  object-fit: contain;
+}
+
+/* ============================================
+   Loading Spinner Container
+   ============================================ */
+.loading-container {
+  text-align: center;
+  padding: 2rem 0;
+}
+
+/* ============================================
+   Empty State
+   ============================================ */
+.empty-state {
+  color: #6c757d;
+  text-align: center;
+  margin: 0.5rem 0;
+}
+
+/* ============================================
+   Module List Styles
+   ============================================ */
+.module-list {
+  border-top: 1px solid #e5e7eb;
+}
+
+.module-item {
+  padding: 12px 0;
+  border-bottom: 1px solid #e5e7eb;
+  font-size: 1rem;
+  color: #333;
+  transition: background-color 0.2s ease;
+}
+
+.module-item:hover {
+  background-color: #f8f9fa;
+}
+
+.view-modules-btn {
+  font-size: 0.875rem;
+  padding: 0.375rem 0.75rem;
+  border-radius: 4px;
+  font-weight: 500;
+  background-color: #667eea !important;
+  color: white !important;
+  border-color: #667eea !important;
+  transition: all 0.2s ease;
+}
+
+.view-modules-btn:hover {
+  background: linear-gradient(135deg, #667eea, #764ba2) !important;
+  color: white !important;
+  border-color: #667eea !important;
+}
+
+.modal-backdrop .modal-footer .btn-secondary {
+  background: #667eea;
+  color: white;
+  border-color: #667eea;
+  transition: all 0.2s ease;
+}
+
+.modal-backdrop .modal-footer .btn-secondary:hover {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  border-color: #667eea;
+  color: white;
+}
+
+/* ============================================
+   Responsive Design
+   ============================================ */
+@media (max-width: 768px) {
+  .modal-dialog-scrollable {
+    max-height: 95vh;
+    margin: 1rem;
+  }
+
+  .modal-body-scrollable {
+    max-height: 75vh;
+  }
+
+  .detail-section {
+    margin-bottom: 1rem;
+  }
+}

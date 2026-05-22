@@ -1,0 +1,42 @@
+/* Account Menu Styles */
+.account-menu {
+  cursor: pointer;
+}
+
+.account-icon-circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #0dcaf0 0%, #087990 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  font-size: 1.2rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.account-icon-circle:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.account-initial {
+  user-select: none;
+}
+
+.account-dropdown {
+  min-width: 220px;
+  margin-top: 0.5rem;
+  position: absolute;
+  right: 0;
+  left: auto;
+  transform: none;
+}
+
+.account-dropdown .dropdown-header {
+  background-color: #f8f9fa;
+  border-radius: 0.375rem 0.375rem 0 0;
+}
+

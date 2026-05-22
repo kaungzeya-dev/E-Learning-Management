@@ -1,0 +1,48 @@
+steps:
+  # ================================
+  # 1. Build Docker image (Dockerfile in /backend)
+  # ================================
+  - name: "gcr.io/cloud-builders/docker"
+    args:
+      [
+        "build",
+        "-f",
+        "backend/Dockerfile",
+        "-t",
+        "us-central1-docker.pkg.dev/secret-fountain-478116-u1/lms-backend-repo/learnhub-backend",
+        "backend",
+      ]
+
+  # ================================
+  # 2. Push image to Artifact Registry
+  # ================================
+  - name: "gcr.io/cloud-builders/docker"
+    args:
+      [
+        "push",
+        "us-central1-docker.pkg.dev/secret-fountain-478116-u1/lms-backend-repo/learnhub-backend",
+      ]
+
+  # ================================
+  # 3. Deploy to Cloud Run (us-central1)
+  # ================================
+  # ================================
+  # 3. Deploy to Cloud Run (us-central1)
+  # ================================
+  - name: "gcr.io/cloud-builders/gcloud"
+    args:
+      [
+        "run",
+        "deploy",
+        "learnhub-backend",
+        "--image=us-central1-docker.pkg.dev/secret-fountain-478116-u1/lms-backend-repo/learnhub-backend",
+        "--region=us-central1",
+        "--platform=managed",
+        "--allow-unauthenticated",
+      ]
+
+images:
+  - "us-central1-docker.pkg.dev/secret-fountain-478116-u1/lms-backend-repo/learnhub-backend"
+
+options:
+  logging: CLOUD_LOGGING_ONLY

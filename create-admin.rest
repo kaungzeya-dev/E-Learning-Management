@@ -1,0 +1,32 @@
+### Create Admin — Railway PRODUCTION database
+# Uses the BACKEND service URL (Spring Boot writes to Railway MySQL).
+# Replace the host if your Railway backend domain is different (Backend → Settings → Networking).
+POST https://e-learning-management-backend-production.up.railway.app/api/admins
+Content-Type: application/json
+
+{
+  "firstName": "Admin",
+  "lastName": "User",
+  "email": "admin@gmail.com",
+  "password": "Password",
+  "permissions": "all,manage_users,manage_courses,manage_content,view_reports"
+}
+
+###
+
+### Verify backend is up (run first)
+# GET https://e-learning-management-backend-production.up.railway.app/health
+
+###
+
+### Create Admin — local (writes to local MySQL only)
+# POST http://localhost:8080/api/admins
+# Content-Type: application/json
+#
+# {
+#   "firstName": "Admin",
+#   "lastName": "User",
+#   "email": "admin@gmail.com",
+#   "password": "Password",
+#   "permissions": "all,manage_users,manage_courses,manage_content,view_reports"
+# }
